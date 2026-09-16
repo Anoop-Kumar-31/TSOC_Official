@@ -1,174 +1,6 @@
 import React, { useRef, useState } from "react";
 
-const characters = [
-    {
-        id: "joseph",
-        name: "Joseph Valemont",
-        shortName: "Joseph",
-        title: "The Fated Heir",
-        image: "/images/characterscards/joseph-card.png",
-        chip: "/images/characterschips/joseph-chip.png",
-        quote: "Some are born. He was created by a mistake between Heaven and Hell.",
-        description: "Born from a union forbidden by powers older than kingdoms, Joseph exists between worlds that were never meant to touch.",
-        stats: [
-            ["Blood", "Half-Blood"],
-            ["Origin", "Forbidden Union"],
-            ["Allegiance", "Unknown"],
-            ["Potential", "Unknown"],
-        ],
-    },
-    {
-        id: "lopez",
-        name: "Sabrina Lopez",
-        shortName: "Lopez",
-        title: "The Loyal One",
-        image: "/images/characters/lopez.webp",
-        quote: "Loyalty is not given. It is earned.",
-        description: "A steadfast presence beside Joseph, Lopez carries secrets that could change everything.",
-        stats: [
-            ["Blood", "Human"],
-            ["Role", "Protector"],
-            ["Allegiance", "Joseph"],
-            ["Nature", "Unknown"],
-        ],
-    },
-    {
-        id: "amayra",
-        name: "Amayra Blackwood",
-        shortName: "Amayra",
-        title: "The Enigma",
-        image: "/images/characterscards/amayra-card.png",
-        chip: "/images/characterschips/amayra-chip.png",
-        quote: "Some truths are more dangerous than lies.",
-        description: "Amayra walks the line between knowledge and secrecy, revealing only what she chooses.",
-        stats: [
-            ["Blood", "Unknown"],
-            ["Origin", "Unknown"],
-            ["Allegiance", "Unknown"],
-            ["Nature", "Enigma"],
-        ],
-    },
-    {
-        id: "david",
-        name: "David Silverfang",
-        shortName: "David",
-        title: "The Strategist",
-        image: "/images/characters/david.webp",
-        quote: "Every war is decided before the first blade is drawn.",
-        description: "A calculated mind capable of seeing patterns others overlook.",
-        stats: [
-            ["Blood", "Human"],
-            ["Role", "Strategist"],
-            ["Allegiance", "Unknown"],
-            ["Threat", "High"],
-        ],
-    },
-    {
-        id: "thomas",
-        name: "Thomas",
-        shortName: "Thomas",
-        title: "The Believer",
-        image: "/images/characters/thomas.webp",
-        quote: "Faith survives where reason fails.",
-        description: "A man whose convictions place him dangerously close to forces beyond his understanding.",
-        stats: [
-            ["Blood", "Human"],
-            ["Role", "Believer"],
-            ["Allegiance", "Unknown"],
-            ["Nature", "Unknown"],
-        ],
-    },
-    {
-        id: "william",
-        name: "Lord William",
-        shortName: "Lord William",
-        title: "The Noble",
-        image: "/images/characters/lord-william.webp",
-        quote: "Power demands a price. Nobility merely decides who pays it.",
-        description: "An aristocrat bound to an ancient order and the politics of a world hidden from humanity.",
-        stats: [
-            ["Blood", "Vampire"],
-            ["Rank", "Lord"],
-            ["Allegiance", "Unknown"],
-            ["Power", "Ancient"],
-        ],
-    },
-    {
-        id: "aria",
-        name: "Aria",
-        shortName: "Aria",
-        title: "The Light",
-        image: "/images/characters/aria.webp",
-        quote: "Light does not always mean mercy.",
-        description: "A figure of extraordinary grace whose connection to the forces of light runs deeper than it appears.",
-        stats: [
-            ["Blood", "Unknown"],
-            ["Realm", "Light"],
-            ["Allegiance", "Unknown"],
-            ["Power", "Divine"],
-        ],
-    },
-    {
-        id: "veleria",
-        name: "Veleria",
-        shortName: "Veleria",
-        title: "The Shadow",
-        image: "/images/characters/veleria.webp",
-        quote: "The darkest secrets are the ones we choose to keep.",
-        description: "A mysterious presence connected to the shadow realm and its ancient bloodlines.",
-        stats: [
-            ["Blood", "Vampire"],
-            ["Realm", "Shadow"],
-            ["Allegiance", "Unknown"],
-            ["Power", "Unknown"],
-        ],
-    },
-    {
-        id: "selene",
-        name: "Selene",
-        shortName: "Selene",
-        title: "The Mystic",
-        image: "/images/characters/selene.webp",
-        quote: "The future is only a memory waiting to happen.",
-        description: "A mystic whose understanding of forces beyond the mortal world makes her invaluable and dangerous.",
-        stats: [
-            ["Blood", "Unknown"],
-            ["Role", "Mystic"],
-            ["Allegiance", "Unknown"],
-            ["Power", "Arcane"],
-        ],
-    },
-    {
-        id: "alistair",
-        name: "Alistair",
-        shortName: "Alistair",
-        title: "The Vengeful",
-        image: "/images/characters/alistair.webp",
-        quote: "Some debts survive for centuries.",
-        description: "Driven by an old grievance, Alistair's path is destined to collide with Joseph's.",
-        stats: [
-            ["Blood", "Vampire"],
-            ["Role", "Hunter"],
-            ["Allegiance", "Unknown"],
-            ["Threat", "Extreme"],
-        ],
-    },
-    {
-        id: "lazarus",
-        name: "Lazarus",
-        shortName: "Lazarus",
-        title: "The Undying",
-        image: "/images/characters/lazarus.webp",
-        quote: "Death came once. It will not come twice.",
-        description: "A figure whose existence defies the boundaries between life, death, and eternity.",
-        stats: [
-            ["Blood", "Unknown"],
-            ["Age", "Ancient"],
-            ["Allegiance", "Unknown"],
-            ["Nature", "Undying"],
-        ],
-    },
-];
+import { characters } from "../../assets/characters/character-data";
 
 const Cast = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -197,9 +29,7 @@ const Cast = () => {
     return (
         <section id="cast" className="relative w-full overflow-hidden bg-[#030303] text-[#eee5d5]">
 
-            {/* =====================================================
-                UPPER 3/4 — CHARACTER SHOWCASE
-            ====================================================== */}
+            {/* UPPER CHARACTER SHOWCASE */}
 
             <div className="relative w-full overflow-hidden lg:h-[65vh]">
 
@@ -224,57 +54,53 @@ const Cast = () => {
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.2)_75%,rgba(0,0,0,0.75)_100%)]" />
 
                     {/* Right info bg darkness */}
-                    <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-transparent via-black/20 to-black/100" />
+                    <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-transparent via-black/20 to-black" />
                 </div>
 
-                {/* =================================================
-                    CHAPTER / COUNTER
-                ================================================== */}
+                {/* CHARACTER / COUNTER */}
 
-                <div className="absolute left-[4%] top-[7%] z-20">
+                <div className="absolute left-[4%] top-[7%] z-20 filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                     <div className="flex items-center gap-4">
-                        <span className="font-[Manrope] text-[11px] uppercase tracking-[0.16em] text-[#c9a96b]">
+                        <span className="font-[Manrope] text-[15px] uppercase tracking-[0.16em] text-[#c9a96b]">
                             {String(activeIndex + 1).padStart(2, "0")}
                         </span>
 
                         <span className="h-px w-8 bg-[#c9a96b]/60" />
 
-                        <span className="font-[Manrope] text-[10px] uppercase tracking-[0.24em] text-[#eee5d5]/80">
+                        <span className="font-[Manrope] text-[12px] uppercase tracking-[0.24em] text-[#eee5d5]/80">
                             Character Archive
                         </span>
                     </div>
                 </div>
 
-                {/* =================================================
-                    LEFT — QUOTE
-                ================================================== */}
+                {/* LEFT BOTTOM — QUOTE */}
 
-                <blockquote className="absolute bottom-[17%] left-[4%] z-20 hidden max-w-[28%] border-l border-[#c9a96b]/70 pl-5 lg:block">
-                    <p className="font-[Cormorant_Garamond] text-[clamp(16px,1.3vw,25px)] leading-[1.3] tracking-[0.02em] text-[#eee5d5] [text-shadow:0_3px_12px_rgba(0,0,0,0.95)]">
+                <blockquote className="absolute bottom-[17%] pt-1 pb-1 left-[4%] z-20 hidden max-w-[28%] border-l border-[#c9a96b]/70 lg:block filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] italic">
+
+                    <div className="absolute z-[-1] w-full h-full bg-linear-to-r from-black/15 via-black/10 to-transparent" />
+                    <p className="z-1 pl-5 font-[Cormorant_Garamond] text-[clamp(16px,1.3vw,25px)] leading-[1.3] tracking-[0.02em] text-[#eee5d5] [text-shadow:0_3px_12px_rgba(0,0,0,0.95)]">
                         “{activeCharacter.quote}”
                     </p>
                 </blockquote>
 
-                {/* =================================================
-                    RIGHT — CHARACTER INFORMATION
-                ================================================== */}
+                {/* RIGHT — CHARACTER INFORMATION */}
 
-                <div className="absolute right-[5%] top-[12%] z-20 w-[38%] max-w-[620px]">
+                <div className="absolute right-[5%] top-[5%] z-20 w-[38%] max-w-[620px] ">
 
-                    <p className="font-[Manrope] text-[9px] uppercase tracking-[0.3em] text-[#c9a96b]">
+                    <p className="font-[Manrope] text-[9px] uppercase tracking-[0.3em] text-[#c9a96b] filter-[drop-shadow(0px_0px_2px_rgba(0,0,0))_drop-shadow(0px_0px_4px_rgba(0,0,0))_drop-shadow(0px_0px_1px_rgba(0,0,0))]">
                         {activeCharacter.title}
                     </p>
 
-                    <h2 className="mt-3 font-[Cormorant_Garamond] text-[clamp(32px,3.2vw,58px)] font-medium uppercase leading-[0.9] tracking-[0.1em] text-[#eee5d5] [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
+                    <h2 className="mt-1 max-w-full whitespace-nowrap overflow-hidden font-[Cormorant_Garamond] text-[clamp(24px,3.2vw,58px)] font-medium uppercase leading-[0.9] tracking-[0.05em] text-[#eee5d5] filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                         {activeCharacter.name}
                     </h2>
 
-                    <div className="my-7 h-px w-full bg-linear-to-r from-[#c9a96b]/60 via-[#c9a96b]/25 to-transparent" />
+                    <div className="my-3 h-px w-full bg-linear-to-r from-[#c9a96b]/60 via-[#c9a96b]/25 to-transparent" />
 
                     <dl className="space-y-3">
                         {activeCharacter.stats.map(([label, value]) => (
-                            <div key={label} className="grid grid-cols-[90px_1fr] items-center gap-4">
-                                <dt className="font-[Manrope] text-[9px] uppercase tracking-[0.18em] text-[#bcae91]">
+                            <div key={label} className="grid grid-cols-[70px_1fr] items-center gap-4 filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
+                                <dt className="font-[Manrope] text-[clamp(8px,0.6vw,17px)] uppercase tracking-[0.18em] font-bold text-[#bcae91]">
                                     {label}
                                 </dt>
 
@@ -286,13 +112,13 @@ const Cast = () => {
                         ))}
                     </dl>
 
-                    <p className="mt-8 max-w-[590px] font-[Cormorant_Garamond] text-[clamp(14px,1vw,18px)] leading-[1.45] text-[#d8cfbf]/90">
+                    <p className="mt-8 max-w-[590px] font-[Cormorant_Garamond] text-[clamp(14px,1vw,18px)] leading-[1.45] text-[#d8cfbf]/90 filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                         {activeCharacter.description}
                     </p>
 
                     <a
                         href={`#${activeCharacter.id}`}
-                        className="group mt-7 inline-flex items-center gap-7 border border-[#c9a96b]/70 px-7 py-3.5 font-[Manrope] text-[9px] uppercase tracking-[0.2em] text-[#eee5d5] transition-all duration-500 hover:border-[#e0c487] hover:bg-[#c9a96b]/10"
+                        className="group mt-7 inline-flex items-center gap-7 border border-[#c9a96b]/70 px-5 py-2.5 font-[Manrope] text-[12px] uppercase tracking-[0.2em] text-[#eee5d5] transition-all duration-500 hover:border-[#e0c487] hover:bg-[#c9a96b]/10 backdrop-blur-[1px]"
                     >
                         <span>Enter Their Story</span>
 
@@ -302,9 +128,7 @@ const Cast = () => {
                     </a>
                 </div>
 
-                {/* =================================================
-                    CAROUSEL ARROWS — MAIN PANEL
-                ================================================== */}
+                {/* CAROUSEL ARROWS — MAIN PANEL */}
 
                 <div className="absolute bottom-[8%] right-[5%] z-30 flex items-center gap-3">
                     <button
@@ -327,9 +151,7 @@ const Cast = () => {
                 </div>
             </div>
 
-            {/* =====================================================
-                LOWER — CAST CHIPS
-            ====================================================== */}
+            {/* LOWER — CAST CHIPS */}
 
             <div className="relative z-30 border-t border-[#c9a96b]/15 bg-[#030303] px-5 py-2 lg:px-[2%]">
 
@@ -371,9 +193,7 @@ const Cast = () => {
                     </div>
                 </div>
 
-                {/* =================================================
-                    CHARACTER CHIPS
-                ================================================== */}
+                {/* CHARACTER CHIPS */}
 
                 <div
                     ref={chipContainerRef}
@@ -389,7 +209,7 @@ const Cast = () => {
                                 onClick={() => setActiveIndex(index)}
                                 aria-label={`Show ${character.name}`}
                                 aria-pressed={isActive}
-                                className={`group relative aspect-[3/4] min-w-[105px] flex-1 overflow-hidden bg-[#050505] text-center transition-all duration-500 ${isActive ? "border border-[#c9a96b] shadow-[0_0_20px_rgba(201,169,107,0.18)]" : "border border-[#eee5d5]/20 hover:border-[#c9a96b]/70"}`}
+                                className={`group relative aspect-3/4 min-w-[105px] flex-1 overflow-hidden bg-[#050505] text-center transition-all duration-500 ${isActive ? "border border-[#c9a96b] shadow-[0_0_20px_rgba(201,169,107,0.18)]" : "border border-[#eee5d5]/20 hover:border-[#c9a96b]/70"}`}
                             >
                                 {/* FULL-BLEED CHARACTER IMAGE */}
 
@@ -445,13 +265,13 @@ const Cast = () => {
 
                                 {/* INNER CORNER DETAILS */}
 
-                                <span className={`pointer-events-none absolute left-[4px] top-[4px] z-40 h-3 w-3 border-l border-t transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
+                                <span className={`pointer-events-none absolute left-1 top-1 z-40 h-3 w-3 border-l border-t transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
 
-                                <span className={`pointer-events-none absolute right-[4px] top-[4px] z-40 h-3 w-3 border-r border-t transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
+                                <span className={`pointer-events-none absolute right-1 top-1 z-40 h-3 w-3 border-r border-t transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
 
-                                <span className={`pointer-events-none absolute bottom-[4px] left-[4px] z-40 h-3 w-3 border-b border-l transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
+                                <span className={`pointer-events-none absolute bottom-1 left-1 z-40 h-3 w-3 border-b border-l transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
 
-                                <span className={`pointer-events-none absolute bottom-[4px] right-[4px] z-40 h-3 w-3 border-b border-r transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
+                                <span className={`pointer-events-none absolute bottom-1 right-1 z-40 h-3 w-3 border-b border-r transition-colors duration-500 ${isActive ? "border-[#e0c487]" : "border-[#c9a96b]/40"}`} />
                             </button>
                         );
                     })}

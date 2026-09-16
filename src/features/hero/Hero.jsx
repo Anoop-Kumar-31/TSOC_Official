@@ -1,37 +1,78 @@
-const Hero = () => {
-    return (
-        <section id="hero" aria-labelledby="hero-title" className="isolate min-h-svh overflow-hidden bg-black text-[var(--color-ivory)]">
-            {/* =====================================================
-          BACKGROUND
-          ===================================================== */}
+import React, { useEffect, useRef } from "react";
 
-            <div aria-hidden="true" className="absolute inset-0 -z-20 bg-[url('/images/hero/hero-background.png')] bg-cover bg-center bg-no-repeat">
-                {/* <div className="absolute inset-0 bg-black/20" /> */}
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/100 via-black/30 to-transparent" />
+const Hero = () => {
+    const backgroundRef = useRef(null);
+    const heroRef = useRef(null);
+
+    useEffect(() => {
+        let frame;
+
+        const handleMouseMove = (event) => {
+            cancelAnimationFrame(frame);
+
+            frame = requestAnimationFrame(() => {
+                const x = (event.clientX / window.innerWidth - 0.5) * 10
+                const y = (event.clientY / window.innerHeight - 0.5) * 10
+
+                if (backgroundRef.current) {
+                    backgroundRef.current.style.transform = `translate3d(${x * 0.4}px, ${y * 0.8}px, 0)`;
+                }
+
+                if (heroRef.current) {
+                    heroRef.current.style.transform = `translate3d(${x * 0.9}px, ${y * 0.9}px, 0)`;
+                }
+            });
+        };
+
+        window.addEventListener("mousemove", handleMouseMove, { passive: true });
+
+        return () => {
+            cancelAnimationFrame(frame);
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
+
+    return (
+        <section id="hero" aria-labelledby="hero-title" className="relative isolate min-h-svh overflow-hidden bg-black text-[var(--color-ivory)]">
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-20 overflow-hidden">
+
+                <img
+                    ref={backgroundRef}
+                    src="/images/hero/background3.png"
+                    alt=""
+                    draggable="false"
+                    className="absolute inset-0 h-full w-full max-w-none select-none object-cover object-bottom will-change-transform translate-y-[-5px] "
+                />
+
+                <img
+                    ref={heroRef}
+                    src="/images/hero/heroz.png"
+                    alt=""
+                    draggable="false"
+                    className="absolute inset-0 h-full w-full max-w-none select-none object-cover object-bottom will-change-transform overflow-visible"
+                />
+
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black via-black/30 to-transparent" />
             </div>
 
-            {/* =====================================================
-          ATMOSPHERIC EFFECTS
-          ===================================================== */}
+            {/* ATMOSPHERIC EFFECTS */}
 
             {/* <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 cinematic-vignette" /> */}
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 cinematic-grain opacity-[0.035] mix-blend-soft-light" />
 
-            {/* =====================================================
-          HEADER / NAVIGATION
-          ===================================================== */}
+            {/* HEADER / NAVIGATION */}
 
-            <header className="absolute inset-x-0 top-0 z-30 px-5 py-5 sm:px-8 sm:py-7 lg:px-12">
+            <header className="absolute inset-x-0 top-0 z-30 px-5 py-5 sm:px-8 sm:py-7 lg:px-12 ">
                 <div className="flex items-center justify-between">
                     {/* Brand */}
 
-                    <a href="/" aria-label="Chiaroscuro home" className="text-cinematic text-[0.7rem] tracking-[0.22em] text-black/80 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current font-black drop-shadow-2xl drop-shadow-white">
+                    <a href="/" aria-label="Chiaroscuro home" className="text-cinematic text-[1rem] tracking-[0.22em] text-black/80 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current font-black drop-shadow-white [filter:drop-shadow(0_0px_3px_rgba(255,255,255))_drop-shadow(0_0px_5px_rgba(255,255,255))_drop-shadow(0_0px_6px_rgba(255,255,255))] ">
                         CHIAROSCURO
                     </a>
 
                     {/* Desktop Navigation */}
 
-                    <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex lg:gap-12 [&>a]:text-cinematic [&>a]:text-[0.58rem] [&>a]:text-white/80 [&>a]:transition-all [&>a]:duration-500 [&>a]:ease-out [&>a:hover]:text-white [&>a:hover]:scale-115 [&>a]:focus-visible:outline-2 [&>a]:focus-visible:outline-offset-4 [&>a]:focus-visible:outline-white">
+                    <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex lg:gap-12 [&>a]:text-cinematic [&>a]:text-[0.58rem] [&>a]:text-white/80 [&>a]:transition-all [&>a]:duration-500 [&>a]:ease-out [&>a:hover]:text-white [&>a:hover]:scale-115 [&>a]:focus-visible:outline-2 [&>a]:focus-visible:outline-offset-4 [&>a]:focus-visible:outline-white [filter:drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                         <a href="#world">
                             The World
                         </a>
@@ -63,12 +104,10 @@ const Hero = () => {
                 </div>
             </header>
 
-            {/* =====================================================
-          LEFT WORLD LABEL
-          ===================================================== */}
+            {/* LEFT WORLD LABEL*/}
 
             <aside aria-label="Light world introduction" className="absolute left-5 top-1/4 z-20 hidden -translate-y-1/2 text-cinematic sm:left-8 lg:left-12 lg:block">
-                <p className="text-[0.58rem] leading-[2.25] text-black/75 font-black drop-shadow-lg drop-shadow-white">
+                <p className="text-[0.58rem] leading-[2.25] text-black/75 font-black drop-shadow-lg drop-shadow-white [filter:drop-shadow(0_0px_3px_rgba(255,255,255))_drop-shadow(0_0px_5px_rgba(255,255,255))_drop-shadow(0_0px_6px_rgba(255,255,255))]">
                     Same
                     <br />
                     Man.
@@ -79,11 +118,9 @@ const Hero = () => {
                 </p>
             </aside>
 
-            {/* =====================================================
-          RIGHT WORLD LABEL
-          ===================================================== */}
+            {/* RIGHT WORLD LABEL*/}
 
-            <aside aria-label="Dark world introduction" className="absolute right-5 top-[56%] z-20 hidden -translate-y-1/2 text-right text-cinematic sm:right-8 lg:right-12 lg:block">
+            <aside aria-label="Dark world introduction" className="absolute right-5 top-[56%] z-20 hidden -translate-y-1/2 text-right text-cinematic sm:right-8 lg:right-12 lg:block [filter:drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))]">
                 <p className="max-w-[7rem] text-[0.58rem] leading-[2.25] text-white/72">
                     Same
                     <br />
@@ -95,12 +132,18 @@ const Hero = () => {
                 </p>
             </aside>
 
-            {/* =====================================================
-          MAIN HERO CONTENT
-          ===================================================== */}
+            {/* MAIN HERO CONTENT*/}
 
-            <div className="relative z-20 flex min-h-svh items-end justify-center px-5 pb-20 pt-32 sm:px-8 sm:pb-24 lg:px-15 lg:pb-5">
+            <div className="relative z-20 flex min-h-svh items-end justify-center px-5  pt-32 sm:pb-2 lg:px-15 lg:pb-5 xs:pb-5">
                 <div className="max-w-6xl text-center">
+
+                    <div
+                        aria-hidden="true"
+                        className=" absolute pointer-events-none bottom-0 -z-10 mx-auto h-1/2 w-1/2"
+                        style={{
+                            background: "radial-gradient(ellipse 80% 90% at 50% 50%, rgba(0,0,0) 0%, rgba(0,0,0,0.75) 25%, transparent 55%)",
+                        }}
+                    />
                     {/* Eyebrow */}
 
                     <p className="hero-reveal hero-reveal-delay-1 mb-4 text-cinematic text-[0.52rem] text-white/75 sm:mb-5 sm:text-[0.62rem] sm:tracking-[0.3em]">
@@ -130,7 +173,7 @@ const Hero = () => {
 
                     {/* Tagline */}
 
-                    <p className="hero-reveal hero-reveal-delay-3 mx-auto mt-5 max-w-xl text-body text-[1.05rem] tracking-[0.035em] text-amber-100 sm:mt-2 sm:text-[1.2rem] italic pb-15">
+                    <p className="hero-reveal hero-reveal-delay-3 mx-auto mt-5 max-w-xl text-body text-[1.05rem] tracking-[0.035em] text-amber-100 sm:mt-2 sm:text-[1.2rem] italic pb-7 lg:pb-15">
                         Some bloodlines were never meant to exist.
                     </p>
 
@@ -150,9 +193,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* =====================================================
-          MOBILE WORLD INDICATORS
-          ===================================================== */}
+            {/* MOBILE WORLD INDICATORS */}
 
             <div aria-hidden="true" className="absolute bottom-6 left-5 z-20 text-cinematic text-[0.45rem] tracking-[0.2em] text-white/45 sm:left-8 lg:hidden">
                 LIGHT
