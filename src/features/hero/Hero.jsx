@@ -6,8 +6,8 @@ const Hero = () => {
           ===================================================== */}
 
             <div aria-hidden="true" className="absolute inset-0 -z-20 bg-[url('/images/hero/hero-background.png')] bg-cover bg-center bg-no-repeat">
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
+                {/* <div className="absolute inset-0 bg-black/20" /> */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/100 via-black/30 to-transparent" />
             </div>
 
             {/* =====================================================
@@ -68,7 +68,7 @@ const Hero = () => {
           ===================================================== */}
 
             <aside aria-label="Light world introduction" className="absolute left-5 top-1/4 z-20 hidden -translate-y-1/2 text-cinematic sm:left-8 lg:left-12 lg:block">
-                <p className="max-w-[7rem] text-[0.58rem] leading-[2.25] text-black/75 font-black drop-shadow-lg drop-shadow-white">
+                <p className="text-[0.58rem] leading-[2.25] text-black/75 font-black drop-shadow-lg drop-shadow-white">
                     Same
                     <br />
                     Man.
