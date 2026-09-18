@@ -5,6 +5,9 @@ import TruthCard from './features/cards/TruthCard'
 import TwoWorldsCard from './features/cards/TwoWorldsCard'
 import Cast from './features/characters/Cast'
 
+import Chronicle from './features/chronicle/Chronicle'
+import AuthorArchive from './features/author/AuthorArchive'
+import Footer from './features/footer/Footer'
 function App() {
 
   return (
@@ -13,6 +16,10 @@ function App() {
       <TruthCard />
       <TwoWorldsCard />
       <Cast />
+
+      <Chronicle />
+      <AuthorArchive />
+      <Footer />
     </>
   )
 }

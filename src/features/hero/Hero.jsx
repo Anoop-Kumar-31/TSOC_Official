@@ -49,7 +49,7 @@ const Hero = () => {
                     src="/images/hero/heroz.png"
                     alt=""
                     draggable="false"
-                    className="absolute inset-0 h-full w-full max-w-none select-none object-cover object-bottom will-change-transform overflow-visible"
+                    className="absolute h-full w-full scale-101 translate-y-10 max-w-none select-none object-cover object-bottom will-change-transform overflow-visible"
                 />
 
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black via-black/30 to-transparent" />
@@ -66,13 +66,13 @@ const Hero = () => {
                 <div className="flex items-center justify-between">
                     {/* Brand */}
 
-                    <a href="/" aria-label="Chiaroscuro home" className="text-cinematic text-[1rem] tracking-[0.22em] text-black/80 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current font-black drop-shadow-white [filter:drop-shadow(0_0px_3px_rgba(255,255,255))_drop-shadow(0_0px_5px_rgba(255,255,255))_drop-shadow(0_0px_6px_rgba(255,255,255))] ">
+                    <a href="/" aria-label="Chiaroscuro home" className="text-cinematic text-[1rem] tracking-[0.22em] text-black/80 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current font-black drop-shadow-white filter-[drop-shadow(0_0px_3px_rgba(255,255,255))_drop-shadow(0_0px_5px_rgba(255,255,255))_drop-shadow(0_0px_6px_rgba(255,255,255))] ">
                         CHIAROSCURO
                     </a>
 
                     {/* Desktop Navigation */}
 
-                    <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex lg:gap-12 [&>a]:text-cinematic [&>a]:text-[0.58rem] [&>a]:text-white/80 [&>a]:transition-all [&>a]:duration-500 [&>a]:ease-out [&>a:hover]:text-white [&>a:hover]:scale-115 [&>a]:focus-visible:outline-2 [&>a]:focus-visible:outline-offset-4 [&>a]:focus-visible:outline-white [filter:drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
+                    <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex lg:gap-12 [&>a]:text-cinematic [&>a]:text-[0.58rem] [&>a]:text-white/80 [&>a]:transition-all [&>a]:duration-500 [&>a]:ease-out [&>a:hover]:text-white [&>a:hover]:scale-115 [&>a]:focus-visible:outline-2 [&>a]:focus-visible:outline-offset-4 [&>a]:focus-visible:outline-white filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                         <a href="#world">
                             The World
                         </a>
@@ -107,7 +107,7 @@ const Hero = () => {
             {/* LEFT WORLD LABEL*/}
 
             <aside aria-label="Light world introduction" className="absolute left-5 top-1/4 z-20 hidden -translate-y-1/2 text-cinematic sm:left-8 lg:left-12 lg:block">
-                <p className="text-[0.58rem] leading-[2.25] text-black/75 font-black drop-shadow-lg drop-shadow-white [filter:drop-shadow(0_0px_3px_rgba(255,255,255))_drop-shadow(0_0px_5px_rgba(255,255,255))_drop-shadow(0_0px_6px_rgba(255,255,255))]">
+                <p className="text-[0.58rem] leading-[2.25] text-black/75 font-black drop-shadow-lg drop-shadow-white filter-[drop-shadow(0_0px_3px_rgba(255,255,255))_drop-shadow(0_0px_5px_rgba(255,255,255))_drop-shadow(0_0px_6px_rgba(255,255,255))]">
                     Same
                     <br />
                     Man.
@@ -120,7 +120,7 @@ const Hero = () => {
 
             {/* RIGHT WORLD LABEL*/}
 
-            <aside aria-label="Dark world introduction" className="absolute right-5 top-[56%] z-20 hidden -translate-y-1/2 text-right text-cinematic sm:right-8 lg:right-12 lg:block [filter:drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))]">
+            <aside aria-label="Dark world introduction" className="absolute right-5 top-[56%] z-20 hidden -translate-y-1/2 text-right text-cinematic sm:right-8 lg:right-12 lg:block filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))]">
                 <p className="max-w-[7rem] text-[0.58rem] leading-[2.25] text-white/72">
                     Same
                     <br />
