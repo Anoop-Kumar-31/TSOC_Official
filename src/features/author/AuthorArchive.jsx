@@ -49,11 +49,8 @@ const AuthorArchive = () => {
                 className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.18)_30%,rgba(0,0,0,0.62)_50%,rgba(0,0,0,0.28)_72%,rgba(0,0,0,0.08)_100%)]"
             />
 
-            {/* VIGNETTE */}
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,transparent_25%,rgb(0_0_0_/_0.65)_100%)]"
-            />
+            {/* INSET VINTAGE */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 shadow-[inset_0_0_35px_25px_rgba(0,0,0)] " />
 
             {/* =====================================================
                 MAIN CONTENT

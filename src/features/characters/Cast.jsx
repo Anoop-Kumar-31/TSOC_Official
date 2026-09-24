@@ -51,10 +51,13 @@ const Cast = () => {
                     {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-[#030303] via-[#030303]/60 to-transparent" /> */}
 
                     {/* Vignette */}
-                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.2)_75%,rgba(0,0,0,0.75)_100%)]" />
+                    {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.2)_75%,rgba(0,0,0,0.75)_100%)]" /> */}
+
+                    {/* INSET VINTAGE */}
+                    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 shadow-[inset_0_0_15px_15px_rgba(0,0,0)] " />
 
                     {/* Right info bg darkness */}
-                    <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-transparent via-black/20 to-black" />
+                    <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-transparent via-black/15 to-black/75" />
                 </div>
 
                 {/* CHARACTER / COUNTER */}

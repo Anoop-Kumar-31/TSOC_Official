@@ -8,7 +8,7 @@ export const characters = [
         chip: "/images/characterschips/joseph-chip.png",
         quote: "If I was born between darkness and light, then I'll choose what I become.",
         description:
-            "The half-vampire, half-human son of Lord William II and Aria Mills. Carrying the ancient power of the Valemont bloodline and the hidden legacy of his mother's reincarnated divine origin, Joseph stands at the center of a conflict far older than himself.",
+            "The half-vampire, half-human son of Lord William II and Aria Mills. Carrying the ancient power of the Valemont bloodline and the hidden legacy of his mother's origin, Joseph stands at the center of a conflict far older than himself. As he grows stronger, he must also confront a truth that could change everything he knows about his family, his power, and his own destiny.",
         stats: [
             ["Blood", "Half-Vampire"],
             ["Heritage", "Valemont & Aria"],
@@ -26,7 +26,7 @@ export const characters = [
         chip: "/images/characterschips/lopez-chip.png",
         quote: "I don't need to understand the darkness to know who I'm standing beside.",
         description:
-            "One of the people closest to Joseph, Lopez has endured captivity, danger, and the growing conflict between humans, vampires, and demons. Her loyalty to Joseph and the others becomes one of the emotional anchors of the story.",
+            "One of the people closest to Joseph, Lopez has endured captivity, danger, and the growing conflict between humans, vampires, and demons. Her loyalty to Joseph and the others becomes one of the emotional anchors of the story. As the world around her shifts, she must also come to terms with her own role and the unexpected strength she discovers within herself.",
         stats: [
             ["Blood", "Human"],
             ["Role", "Ally"],
@@ -44,7 +44,7 @@ export const characters = [
         chip: "/images/characterschips/amayra-chip.png",
         quote: "If the truth is dangerous, then someone has to be brave enough to uncover it.",
         description:
-            "A human reporter drawn into a world she was never supposed to discover. Amayra's search for truth leads her beyond the human world and into the secrets surrounding Joseph, the supernatural kingdoms, and the forces threatening them all.",
+            "A human reporter drawn into a world she was never supposed to discover. Amayra's search for truth leads her beyond the human world and into the secrets surrounding Joseph, the supernatural kingdoms, and the forces threatening them all. She may discover about her own family's royal legacy while uncovering the truth.",
         stats: [
             ["Blood", "Human"],
             ["Role", "Reporter"],
@@ -80,7 +80,7 @@ export const characters = [
         chip: "/images/characterschips/thomas-chip.png",
         quote: "I may not understand their world, but I know exactly who I will protect.",
         description:
-            "Amayra's father and a man who finds himself slowly being pulled into a supernatural conflict far beyond the human world. His greatest instinct remains protecting his daughter, even when standing against the powers of the supernaturals.",
+            "Amayra's father and a man who finds himself slowly being pulled into a supernatural conflict far beyond the human world which he believed to left his lineage. His greatest instinct remains protecting his daughter, even when standing against the powers of the supernaturals.",
         stats: [
             ["Blood", "Human"],
             ["Role", "Last Human King's Legacy"],
@@ -98,7 +98,7 @@ export const characters = [
         chip: "/images/characterschips/william-chip.png",
         quote: "A king may command a kingdom, but he cannot command what the heart chooses to love.",
         description:
-            "The Lord of the Vampire Kingdom, husband of Aria Mills, and father of Joseph. Once a loving husband and father, William's past became buried beneath tragedy, power, and a mysterious decline that eventually left him in a coma.",
+            "The Lord of the Vampire Kingdom, conqueror of demon realm, husband of Aria Mills and father of Joseph. Once a loving husband and father, William's past became buried beneath tragedy, power, and a mysterious decline that eventually left him in a coma. He may be powerless now , but his past acts has already shifted the balance of the divine fate.",
         stats: [
             ["Blood", "Vampire"],
             ["Rank", "Vampire Lord"],

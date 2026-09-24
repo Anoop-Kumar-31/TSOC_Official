@@ -13,18 +13,15 @@ const TruthCard = () => {
                 className="absolute inset-0 -z-10 bg-linear-to-r from-transparent via-black/20 to-transparent"
             />
 
-            {/* VIGNETTE */}
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_25%,rgb(0_0_0_/_0.55)_100%)]"
-            />
+            {/* INSET VINTAGE */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 shadow-[inset_0_0_25px_10px_rgba(0,0,0)] " />
 
             {/* CONTENT */}
             <div className="relative z-10 flex aspect-3/1 w-full items-center justify-center pb-15">
                 <div className="w-full max-w-6xl text-center">
 
                     {/* TOP TITLE */}
-                    <p className="text-[#8b171b] [text-shadow:0_2px_10px_rgb(0_0_0_/_0.9)] text-display text-4xl font-normal tracking-tighter">
+                    <p className="text-[#8b171b] [text-shadow:0_2px_10px_rgb(0_0_0_/0.9)] text-display text-4xl font-normal tracking-tighter">
                         TRUTH
                     </p>
                     <p className="text-cinematic text-[clamp(0.45rem,0.9vw,0.8rem)] tracking-[0.35em] text-white/90">
@@ -52,15 +49,15 @@ const TruthCard = () => {
                         id="truth-title"
                         className="mt-[2%] flex flex-wrap items-center justify-center gap-x-[1vw] text-display text-[clamp(1.5rem,2vw,4rem)] leading-none font-normal tracking-[0.04em]"
                     >
-                        <span className="text-[#eee9df] [text-shadow:0_2px_8px_rgb(0_0_0_/_0.8)] font-normal tracking-tighter">
+                        <span className="text-[#eee9df] [text-shadow:0_2px_8px_rgb(0_0_0_/0.8)] font-normal tracking-tighter">
                             HEAVEN.
                         </span>
 
-                        <span className="text-[#8b171b] [text-shadow:0_2px_10px_rgb(0_0_0_/_0.9)] font-normal tracking-tighter">
+                        <span className="text-[#8b171b] [text-shadow:0_2px_10px_rgb(0_0_0_/0.9)] font-normal tracking-tighter">
                             HELL.
                         </span>
 
-                        <span className="text-[#ded4c6] [text-shadow:0_2px_8px_rgb(0_0_0_/_0.8)]">
+                        <span className="text-[#ded4c6] [text-shadow:0_2px_8px_rgb(0_0_0_/0.8)]">
                             BLOOD.
                         </span>
                     </h2>

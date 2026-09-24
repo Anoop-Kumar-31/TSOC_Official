@@ -10,7 +10,7 @@ const DiamondDivider = ({
     lineWidth = "w-[clamp(100px,12vw,250px)]",
     diamondSize = "h-[7px] w-[7px]",
 }) => (
-    <div className="flex items-center justify-center [filter:drop-shadow(0_2px_3px_rgb(0_0_0_/_0.9))_drop-shadow(0_6px_8px_rgb(0_0_0_/_0.8))_drop-shadow(0_12px_20px_rgb(0_0_0_/_0.7))]">
+    <div className="flex items-center justify-center filter-[drop-shadow(0_2px_3px_rgb(0_0_0_/0.9))_drop-shadow(0_6px_8px_rgb(0_0_0_/0.8))_drop-shadow(0_12px_20px_rgb(0_0_0_/0.7))]">
         <span className={`h-px ${lineWidth} ${lineClass}`} />
         <span className={`mx-2 ${diamondSize} rotate-45 border ${diamondClass}`} />
         <span className={`h-px ${lineWidth} ${lineClass}`} />
@@ -59,9 +59,9 @@ const TwoWorldsCard = () => {
                     draggable="false"
                     className="absolute inset-0 h-full w-full select-none object-cover object-center"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.02)_0%,rgba(0,0,0,0)_27%,rgba(0,0,0,0.32)_39%,rgba(0,0,0,0.64)_50%,rgba(0,0,0,0.32)_61%,rgba(0,0,0,0)_73%,rgba(0,0,0,0.04)_100%)]" />
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.22)_78%,rgba(0,0,0,0.68)_100%)]" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#020202] via-[#020202]/50 to-transparent" />
+
+                {/* INSET VINTAGE */}
+                <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 shadow-[inset_0_0_25px_10px_rgba(0,0,0)] " />
 
                 {/* ===== Content: flex column ===== */}
                 <div className="relative z-20 flex h-full flex-col items-center pt-[clamp(14px,1.6vw,36px)] pb-[clamp(20px,3vw,64px)]">
@@ -69,10 +69,10 @@ const TwoWorldsCard = () => {
                     <header className="text-center">
                         <h2
                             id="two-worlds-title"
-                            className="whitespace-nowrap font-[Cormorant_Garamond] text-[clamp(22px,2.65vw,46px)] font-medium uppercase leading-none tracking-tighter text-[#e8ddc8] [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]"
+                            className="whitespace-nowrap font-[Cormorant_Garamond] text-[clamp(22px,2.65vw,46px)] font-medium uppercase leading-none tracking-tighter text-[#e8ddc8] filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] "
                         >
                             Two{" "}
-                            <span className="font-normal tracking-tighter text-[#8b171b] [text-shadow:0_2px_10px_rgb(0_0_0_/_0.9)]">
+                            <span className="font-normal tracking-tighter text-[#8b171b] [text-shadow:0_2px_10px_rgb(0_0_0_/0.9)]">
                                 Ancient
                             </span>{" "}
                             Powers.
@@ -83,7 +83,7 @@ const TwoWorldsCard = () => {
                     </header>
 
                     {/* MIDDLE — two worlds side by side */}
-                    <div className="flex w-full flex-1 items-center justify-center pb-15 py-10 gap-[15%]">
+                    <div className="flex w-full flex-1 items-center justify-center pb-15 py-10 gap-[15%] filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                         <WorldSide
                             title="Light"
                             traits={lightTraits}
@@ -101,7 +101,7 @@ const TwoWorldsCard = () => {
                     </div>
 
                     {/* BOTTOM — Joseph */}
-                    <div className="flex flex-col items-center gap-2 text-center">
+                    <div className="flex flex-col items-center gap-2 text-center filter-[drop-shadow(0_0px_3px_rgba(0,0,0))_drop-shadow(0_0px_5px_rgba(0,0,0))_drop-shadow(0_0px_6px_rgba(0,0,0))] ">
                         <h3 className="font-[Cormorant_Garamond] text-[clamp(15px,0.5vw,25px)] font-medium uppercase leading-[1.08] tracking-tight text-[#e6dac4] [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
                             Between Them, He Was Born.
                         </h3>

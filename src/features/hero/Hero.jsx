@@ -85,7 +85,7 @@ const Hero = () => {
                             The Chronicle
                         </a>
 
-                        <a href="#enter" className="group relative isolate overflow-hidden border border-white/25 px-4 py-2 text-white/80 transition-colors duration-500 hover:!text-black hover:cursor-pointer">
+                        <a href="#enter" className="group relative isolate overflow-hidden border border-white/25 px-4 py-2 text-white/80 transition-colors duration-500 hover:text-black! hover:cursor-pointer">
                             <span aria-hidden="true" className="absolute inset-0 -z-10 origin-left scale-x-0 bg-white transition-transform duration-700 ease-out group-hover:scale-x-100" />
                             <span className="relative z-10">Enter</span>
                         </a>

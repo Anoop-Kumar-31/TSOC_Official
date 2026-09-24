@@ -14,6 +14,9 @@ const Chronicle = () => {
                 className="absolute inset-0 -z-20 bg-[url('/images/chronicle-card1.png')] bg-cover bg-center bg-no-repeat w-full"
             />
 
+            {/* INSET VINTAGE */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 shadow-[inset_0_0_35px_25px_rgba(0,0,0)] " />
+
             {/* CENTER DARKENING */}
             <div
                 aria-hidden="true"
@@ -41,7 +44,7 @@ const Chronicle = () => {
                 {/* SECTION HEADER */}
 
                 <div className="mb-1 flex items-center gap-5 sm:mb-2 mx-4">
-                    <h2 className="shrink-0 font-[Cormorant_Garamond] text-[clamp(28px,2vw,52px)] font-medium uppercase leading-none tracking-[0.08em] text-[#eee5d5] [text-shadow:0_3px_12px_rgb(0_0_0_/_0.9)]">
+                    <h2 className="shrink-0 font-[Cormorant_Garamond] text-[clamp(28px,2vw,52px)] font-medium uppercase leading-none tracking-[0.08em] text-[#eee5d5] [text-shadow:0_3px_12px_rgb(0_0_0_/0.9)]">
                         The Chronicle
                     </h2>
 
@@ -96,7 +99,7 @@ const Chronicle = () => {
                             <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-5 filter-[drop-shadow(0px_0px_2px_rgba(0,0,0))_drop-shadow(0px_0px_4px_rgba(0,0,0))_drop-shadow(0px_0px_1px_rgba(0,0,0))]">
                                 <div>
                                     <p className="font-[Cormorant_Garamond] text-3xl leading-none text-[#d8b978]">
-                                        50+
+                                        75+
                                     </p>
                                     <p className="mt-1 font-[Manrope] text-[10px] uppercase tracking-[0.3em] text-[#bcae91]">
                                         Chapters
