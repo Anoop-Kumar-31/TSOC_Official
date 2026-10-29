@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Hero from './features/hero/Hero'
 import TruthCard from './features/cards/TruthCard'
